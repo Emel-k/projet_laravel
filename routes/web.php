@@ -22,16 +22,15 @@ Route::view('/project', 'project');
 
 Route::view('/recette', 'recette');
 
-Route::view('/recipe', 'recipe');
 
 
-Route::get('/recipe', function (){
+/*Route::get('/recipe', function (){
     $model = new Recette();
     $recettes = $model->getAll();
     ;
 
     return view('recipe.index', compact('recettes'));
-})->name('recipe.index');
+})->name('recipe.index');*/
 
 Route::get('/recipes/{id}', function (int $id) {
 

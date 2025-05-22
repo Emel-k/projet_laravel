@@ -9,9 +9,10 @@
         </div>
 
         <div class="form-group">
-            <label for="Content">Content</label>
-            <textarea type="content" class="form-control" required ></textarea>
+            <label for="description">Description</label>
+            <textarea name="description" class="form-control" required></textarea>
         </div>
+
 
         <button type="submit" class="btn btn-primary lg">Ajouter</button>
 

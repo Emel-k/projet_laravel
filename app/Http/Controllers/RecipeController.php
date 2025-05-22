@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\recipe;
 use Illuminate\Http\Request;
 
-class RecipeController extends Controller
+class recipeController extends Controller
 {
     public function index()
     {
@@ -30,24 +30,29 @@ class RecipeController extends Controller
 
         $recipe->save();
 
-        return redirect()->route('recipe.index')->with('success', 'Recipe creer avec succes');
+        return redirect()->route('recipe.index')->with('success', 'recipe creer avec succes');
     }
-    public function edit(recipe $recipe)
+    public function edit(Recipe $recipe)
     {
         return view('recipe.edit', compact('recipe'));
     }
-    public function update(Request $request, recipe $recipe)
+    public function update(Request $request, Recipe $recipe)
     {
         $request->validate([
             'title' => 'required',
             'description' => 'required',
         ]);
         $recipe->update($request->all());
-        return redirect()->route('recipe.index')->with('success', 'Recipe modifier avec succes');
+        return redirect()->route('recipe.index')->with('success', 'recipe modifier avec succes');
     }
     public function destroy(recipe $recipe)
     {
         $recipe->delete();
-        return redirect()->route('recipe.index')->with('success', 'Recipe supprimer avec succes');
+        return redirect()->route('recipe.index')->with('success', 'recipe supprimer avec succes');
+    }
+
+    public function show(recipe $recipe)
+    {
+        return view('recipe.show', compact('recipe'));
     }
 }

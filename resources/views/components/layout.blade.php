@@ -17,7 +17,7 @@
 <ul>
     <li><a href="/">Accueil</a></li>
     <li><a href="/project">Projects</a></li>
-    <li><a href="/recipe">Recettes</a></li>
+    <li><a href="/Recipe">Recettes</a></li>
 </ul>
 
     {{$slot}}

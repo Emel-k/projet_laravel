@@ -1,8 +1,7 @@
+
 <x-layout>
-    <h1>{{$recipes['title'] }}</h1>
 
-     @foreach($recipes['ingredients'] as $ingredient)
-        <p>{{ $ingredient}}</p>
+<h1>{{$recipe->title}}</h1>
+    <h2>{{$recipe->description}}</h2>
 
-        @endforeach
 </x-layout>
